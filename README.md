@@ -23,7 +23,7 @@ The app allows to find a pokemon by it's name or id and get a random one.
     <img src='content/search_screen_2.png' width=240>
 </div>
 
-### Search screen
+### Random pokemon screen
 <div>
     <img src='content/random_screen_1.png' width=240>
     <img src='content/random_screen_2.png' width=240>
