@@ -1,16 +1,30 @@
-# pokeapi_test_task
+# PokeAPI test task
 
-A new Flutter project.
+A Flutter app for [PokeAPI](https://pokeapi.co/) requests.\
+The app allows to find a pokemon by it's name or id and get a random one.
 
-## Getting Started
+## Stack
+- Flutter BLoC
+- SQFlite
+- http
 
-This project is a starting point for a Flutter application.
+## Screens:
+- Search screen
+- Random pokemon screen
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Splash screen
+<img src="content/splash_screen.png" alt="Screenshot of the splash screen" width="240"/>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Search screen
+<div>
+    <img src='content/search_screen_1.png' width=240>
+    <img src='content/search_screen_2.png' width=240>
+</div>
+
+### Search screen
+<div>
+    <img src='content/random_screen_1.png' width=240>
+    <img src='content/random_screen_2.png' width=240>
+</div>
