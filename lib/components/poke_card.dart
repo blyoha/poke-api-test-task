@@ -24,7 +24,7 @@ class PokeCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                poke.name,
+                poke.name.toUpperCase().replaceAll("-", " "),
                 style: const TextStyle(
                   fontSize: 28.0,
                   fontWeight: FontWeight.bold,
