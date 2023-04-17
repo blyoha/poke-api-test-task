@@ -39,6 +39,8 @@ dependencies:
   gap: ^3.0.0
   http: ^0.13.5
   meta: ^1.9.1
+  sqflite: ^2.2.6
+  path: ^1.8.3
 
 dev_dependencies:
   flutter_test:

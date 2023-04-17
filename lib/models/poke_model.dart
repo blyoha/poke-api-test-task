@@ -1,3 +1,25 @@
+const String tablePoke = "poke";
+
+class PokeFields {
+  static const List<String> values = [
+    id,
+    name,
+    height,
+    weight,
+    abilities,
+    forms,
+    image,
+  ];
+
+  static const String id = "_id";
+  static const String name = "name";
+  static const String height = "height";
+  static const String weight = "width";
+  static const String abilities = "abilities";
+  static const String forms = "forms";
+  static const String image = "image";
+}
+
 class PokeModel {
   final int id;
   final String name;
@@ -35,5 +57,38 @@ class PokeModel {
       forms: forms,
       image: image,
     );
+  }
+
+  factory PokeModel.fromDB(Map<String, dynamic> data) {
+    final List abilities = data[PokeFields.abilities]
+        .replaceAll("[", "")
+        .replaceAll("]", "")
+        .split(",");
+    final List forms = data[PokeFields.forms]
+        .replaceAll("[", "")
+        .replaceAll("]", "")
+        .split(",");
+
+    return PokeModel(
+      id: data[PokeFields.id] as int,
+      name: data[PokeFields.name] as String,
+      height: data[PokeFields.height],
+      weight: data[PokeFields.weight],
+      abilities: abilities,
+      forms: forms,
+      image: data[PokeFields.image] as String,
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      PokeFields.id: id,
+      PokeFields.name: name,
+      PokeFields.height: height,
+      PokeFields.weight: weight,
+      PokeFields.abilities: abilities.toString(),
+      PokeFields.forms: forms.toString(),
+      PokeFields.image: image,
+    };
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../config/theme.dart';
+import '../database/poke_database.dart';
 import 'random_page.dart';
 import 'search_page.dart';
 
@@ -17,6 +18,12 @@ class _HomePageState extends State<HomePage> {
     RandomPage(),
   ];
   int currentIndex = 0;
+
+  @override
+  void dispose() {
+    super.dispose();
+    PokeDatabase.instance.close();
+  }
 
   @override
   Widget build(BuildContext context) {
